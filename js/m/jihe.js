@@ -1,0 +1,63 @@
+const jihesvg = `
+<div class="svg_jihe">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" width="100%" height="100%" viewBox="0 0 1400 800">
+  <rect x="1300" y="400" rx="40" ry="40" width="300" height="300" stroke="rgb(129, 201, 149)" fill="rgb(129, 201, 149)">
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 1450 550" to="360 1450 550" repeatCount="indefinite"/>
+  </rect>
+  <path d="M 100 350 A 150 150 0 1 1 400 350 Q400 370 380 370 L 250 370 L 120 370 Q100 370 100 350" stroke="rgb(253, 214, 99)" fill="rgb(253, 214, 99)">
+    <animateMotion path="M 800 -200 L 800 -300 L 800 -200" dur="20s" begin="0s" repeatCount="indefinite"/>
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" values="0 210 530 ; -30 210 530 ; 0 210 530" keyTimes="0 ; 0.5 ; 1" repeatCount="indefinite"/>
+  </path>
+  <circle cx="200" cy="150" r="20" stroke="#1a73e8" fill="#1a73e8">
+    <animateMotion path="M 0 0 L 40 20 Z" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M 165 580 L 270 580 Q275 578 270 570 L 223 483 Q220 480 217 483 L 165 570 Q160 578 165 580" stroke="rgb(238, 103, 92)" fill="rgb(238, 103, 92)">
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 210 530" to="360 210 530" repeatCount="indefinite"/>
+  </path>
+  <circle cx="1200" cy="600" r="30" stroke="rgb(241, 243, 244)" fill="rgb(241, 243, 244)">
+    <animateMotion path="M 0 0 L -20 40 Z" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M 100 350 A 40 40 0 1 1 180 350 L 180 430 A 40 40 0 1 1 100 430 Z" stroke="rgb(241, 243, 244)" fill="rgb(241, 243, 244)">
+    <animateMotion path="M 140 390 L 180 360 L 140 390" dur="20s" begin="0s" repeatCount="indefinite"/>
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" values="0 140 390; -60 140 390; 0 140 390" keyTimes="0 ; 0.5 ; 1" repeatCount="indefinite"/>
+  </path>
+  <rect x="400" y="600" rx="40" ry="40" width="100" height="100" stroke="rgb(129, 201, 149)" fill="rgb(129, 201, 149)">
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="-30 550 750" to="330 550 750" repeatCount="indefinite"/>
+  </rect>
+</svg>
+</div>
+`;
+function loadJS(url, callback) {
+  var script = document.createElement('script')
+  var fn = callback || function () { };
+  script.type = 'text/javascript';
+  if (script.readyState) {
+    script.onreadystatechange = function () {
+      if (script.readyState == 'loaded' || script.readyState == 'complete') {
+        script.onreadystatechange = null;
+        fn();
+      }
+    };
+  } else {
+    script.onload = function () {
+      fn();
+    };
+  }
+  script.src = url;
+  document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+!(function () {
+  loadJS("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js", () => {
+    var username = '钱辉';
+    var usertext = "一支穿云箭，千军万马来相见！";
+    var consoleA = "color:#fff;background:#6cf;padding:5px 0;border: 1px solid #6cf;";
+    var consoleB = "color:#6cf;background:none;padding:5px 0;border: 1px solid #6cf;";
+    console.log(`\n %c ${username} %c ${usertext}`, consoleA, consoleB);
+    jihe();
+  })
+})();
+const jihe = () => {
+  $("body").css({ "margin": "0", "padding": "0" }).append(jihesvg);
+  $(".svg_jihe").css({"width": "100vw", "height": "100vh", "position": "fixed", "top":"0", "left": "0", "z-index": "-100"})
+}
