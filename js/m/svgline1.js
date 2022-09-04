@@ -1,4 +1,4 @@
-const svgcvline= `
+const svgcvline1= `
 <div class="svg_gb_line">
         <svg version="1.1" id="home-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" viewBox="0 0" style="width:100vw;height:100vh;" xml:space="preserve">
@@ -137,11 +137,11 @@ function loadJS(url, callback) {
 		var consoleA = "color:#fff;background:#6cf;padding:5px 0;border: 1px solid #6cf;";
 		var consoleB = "color:#6cf;background:none;padding:5px 0;border: 1px solid #6cf;";
 		console.log(`\n %c ${username} %c ${usertext}`, consoleA, consoleB);
-		svgline();
+		svgline1();
 	})
 })();
-function svgline(){
-    $("body").css({ "margin": "0", "padding": "0"}).append(`${svgcvline}`);
+function svgline1(){
+    $("body").css({ "margin": "0", "padding": "0"}).append(`${svgcvline1}`);
     $(".svg_gb_line").css({ "width": "100vw", "height": "100vh", "position": "fixed", "top": "0", "left": "0", "right": "0", "bottom": "0", "z-index": "-100","overflow": "hidden"});
     $("#svg_line_home").css({"width": "100vw", "height": "100vh", "position": "fixed", "top": "0px", "left": "0px", "right": "0px", "bottom": "0px", "z-index":"-100","clip-path": "url(#cache)"});
     $("#svg_line_red").css({"fill":"none","opacity": "0.15", "stroke":"#CE1B5F","stroke-width": "12","stroke-miterlimit": "10"})

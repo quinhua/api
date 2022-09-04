@@ -135,4 +135,4 @@ function clickEffect() {
     }
   }
 }
-clickEffect();//调用特效函数
+clickEffect();

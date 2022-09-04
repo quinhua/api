@@ -25,11 +25,11 @@ function loadJS(url, callback) {
       var consoleA = "color:#fff;background:#6cf;padding:5px 0;border: 1px solid #6cf;";
       var consoleB = "color:#6cf;background:none;padding:5px 0;border: 1px solid #6cf;";
       console.log(`\n %c ${username} %c ${usertext}`, consoleA, consoleB);
-      pugy();
+      pugy1();
     })
   })();
 
-function pugy(){
+function pugy1(){
 
 const pgy="https://git.poker/quinhua/pics/blob/main/cc/cpgy.webp?raw=true";
 $("body").append($(`<div class="snow-container" style="position:fixed;top:0;left:0;
