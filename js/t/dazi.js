@@ -29,11 +29,12 @@ function loadJS(url, callback) {
 
 loadJS('https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js', () => {
     dazi();
-    var username = '钱辉';
-    var usertext = "一支穿云箭，千军万马来相见！";
+    var username = '钱辉'; var usertext = "一支穿云箭，千军万马来相见！";
+    var userurl = "https://github.com/quinhua";
     var consoleA = "color:#fff;background:#6cf;padding:5px 0;border: 1px solid #6cf;";
     var consoleB = "color:#6cf;background:none;padding:5px 0;border: 1px solid #6cf;";
     console.log(`\n %c ${username} %c ${usertext}`, consoleA, consoleB);
+    console.log(`\n %c ${username} %c ${userurl}`, consoleA, consoleB);
     
 })
    function dazi(){

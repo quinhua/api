@@ -8,11 +8,12 @@ function clickEffect() {
   let normal;
   let ctx;
   const colours = ["#F73859", "#14FFEC", "#00E0FF", "#FF99FE", "#FAF15D"];
-  var username = '钱辉';
-  var usertext = "一支穿云箭，千军万马来相见！";
+  var username = '钱辉'; var usertext = "一支穿云箭，千军万马来相见！";
+  var userurl = "https://github.com/quinhua";
   var consoleA = "color:#fff;background:#6cf;padding:5px 0;border: 1px solid #6cf;";
   var consoleB = "color:#6cf;background:none;padding:5px 0;border: 1px solid #6cf;";
-  console.log(`\n %c ${username} %c ${usertext}`, consoleA, consoleB); 
+  console.log(`\n %c ${username} %c ${usertext}`, consoleA, consoleB);
+  console.log(`\n %c ${username} %c ${userurl}`, consoleA, consoleB);
   const canvas = document.createElement("canvas");
   document.body.appendChild(canvas);
   canvas.setAttribute("style", "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");

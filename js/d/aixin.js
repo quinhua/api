@@ -1,10 +1,11 @@
 
 ! function (e, t, a) {
-    var username = '钱辉';
-var usertext = "一支穿云箭，千军万马来相见！";
-var consoleA = "color:#fff;background:#6cf;padding:5px 0;border: 1px solid #6cf;";
-var consoleB = "color:#6cf;background:none;padding:5px 0;border: 1px solid #6cf;";
-console.log(`\n %c ${username} %c ${usertext}`, consoleA, consoleB);
+    var username = '钱辉'; var usertext = "一支穿云箭，千军万马来相见！";
+    var userurl = "https://github.com/quinhua";
+    var consoleA = "color:#fff;background:#6cf;padding:5px 0;border: 1px solid #6cf;";
+    var consoleB = "color:#6cf;background:none;padding:5px 0;border: 1px solid #6cf;";
+    console.log(`\n %c ${username} %c ${usertext}`, consoleA, consoleB);
+    console.log(`\n %c ${username} %c ${userurl}`, consoleA, consoleB);
     function r() {
         for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[
             e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x +
